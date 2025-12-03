@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>EcoBrick – Solusi Bangunan Ramah Lingkungan</title>
     <link rel="stylesheet" href="style.css">
@@ -8,7 +9,6 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <nav>
         <ul>
             <li><a href="#home">Beranda</a></li>
@@ -20,16 +20,14 @@
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="hero-text">
-            <h1>Membangun Masa Depan dengan <span>EcoBrick</span></h1>
+            <h1>Greenova Labs<br>Membangun Masa Depan <span>EcoBrick</span></h1>
             <p>Solusi bangunan yang kuat, murah, ramah lingkungan, dan mendukung ekonomi sirkular.</p>
             <a href="#about" class="btn">Pelajari Lebih Lanjut</a>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section class="about" id="about">
         <div class="image-box">
             <img src="asset/tentang.png" alt="">
@@ -46,7 +44,6 @@
         </div>
     </section>
 
-    <!-- KEUNGGULAN -->
     <section class="keunggulan" id="keunggulan">
         <h2>Keunggulan <span>EcoBrick</span></h2>
         <div class="garis"></div>
@@ -90,7 +87,6 @@
         </div>
     </section>
 
-    <!-- GALERI -->
     <section class="gallery" id="gallery">
         <h2>Galeri <span>EcoBrick</span></h2>
         <div class="garis"></div>
@@ -105,7 +101,6 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section class="contact" id="contact">
         <h2>Hubungi <span>Kami</span></h2>
         <div class="garis"></div>
@@ -132,6 +127,18 @@
             </form>
         </div>
     </section>
+
+    <script>
+    window.addEventListener("scroll", function() {
+        let nav = document.querySelector("nav");
+
+        if (window.scrollY > 50) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    });
+</script>
 
 </body>
 </html>
