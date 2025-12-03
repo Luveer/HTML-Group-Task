@@ -13,6 +13,8 @@
   display: none;
 }
 
+
+
 .home {
   width: 100%;
   height: 90vh;
@@ -220,8 +222,97 @@ nav.sticky .logo {
 }
 
 .contact-us {
-  padding: 3rem 8rem;
+  padding: 7rem 6rem;
   width: 100%;
   height: 50vh;
   background-color: #005624;
+  color: #f1f1f1;
+}
+
+.footer {
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.contact-us ul li {
+  list-style: none;
+  color: #f1f1f1;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.sosmed {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.8rem;
+  gap: 0.7rem;
+  
+}
+
+.sosmed img {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.projects {
+  padding: 3rem 8rem;
+
+}
+
+.projects-content {
+  margin-top: 5rem;
+}
+
+.carousel {
+  margin: 50px auto;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+}
+
+.cards {
+  flex: 0 0 5em;
+  font-size: 1rem;
+  border-radius: .2em;
+  text-align: center;
+  align-items: center;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding-right: 1em;
+}
+
+.group-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding-right: 1em;
+}
+
+.carousel:hover .group {
+  animation: spin 15s infinite linear;
+}
+
+.carousel:hover .group-2 {
+  animation: spin-2 15s infinite linear;
+}
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;}
+}
+@keyframes spin-2 {
+  from {translate: -100%;}
+  to {translate: 0;}
 }
