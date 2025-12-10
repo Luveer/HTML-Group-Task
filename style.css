@@ -1,19 +1,23 @@
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; 
+    scroll-padding-top: 100px;
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Plus Jakarta Sans", sans-serif;
+body {
+    padding-top: 80px;
+    background-color: #f8fff8;
 }
 
 nav {
@@ -21,33 +25,29 @@ nav {
     top: 0;
     width: 100%;
     height: 70px;
-    padding: 0 40px;
 
-    background: #005624;             
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
 
+    background: #005624;             
     transition: background 0.4s ease, backdrop-filter 0.4s ease;
+    z-index: 9999;
 }
 
 nav.scrolled {
-    background: rgba(0, 86, 36, 0.75);
-    backdrop-filter: blur(6px);   
+    background: rgba(189, 238, 210, 0.466);
+    backdrop-filter: blur(6px);
 }
 
-
-body {
-    padding-top: 80px;
+nav.scrolled ul li a {
+    color: #ffea65; 
 }
-
-
 
 nav ul {
     display: flex;
-    align-items: center;
     gap: 25px;
+    align-items: center;
 }
 
 nav ul li {
@@ -56,17 +56,32 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
     color: white;
-    font-size: 15px;
-    font-weight: 400;  
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    letter-spacing: 1px;
+    color: #fff7bb;
 }
 
 nav .logo {
     width: 35px;
-    height: 35px;
     margin-left: 20px;
+    transition: 0.3s ease;
 }
+
+nav .logo:hover {
+    transform: rotate(8deg) scale(1.1);
+}
+
+
+
+/* ============================ */
+/*            HERO              */
+/* ============================ */
 
 .hero {
     width: 100%;
@@ -84,55 +99,86 @@ nav .logo {
 }
 
 .hero-text h1 {
-    font-size: 45px;
-    max-width: 600px;
+    font-size: 55px;
+    font-weight: 600;
+    max-width: 650px;
 }
 
 .hero-text h1 span {
-    color: #FFC300;
+    color: #FFD84D;
 }
 
 .hero-text p {
-    margin-top: 10px;
     font-size: 18px;
+    margin-top: 8px;
+    max-width: 520px;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 35px;
-    background-color: #FFC300;
-    color: black;
-    font-weight: bold;
-    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #FFD84D;
+    color: #004d23;
+    font-weight: 600;
     text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
 }
 
+.btn:hover {
+    background-color: #ffe889;
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+}
+
+
+
+/* ============================ */
+/*            ABOUT             */
+/* ============================ */
+
+.about-page,
 .about {
-    display: flex;
     padding: 6rem 8rem;
+}
+
+.about-flex {
+    display: flex;
     gap: 3rem;
 }
 
-.about .image-box img {
-    width: 420px;
-    height: 500px;
+.about-img {
+    width: 400px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.4s ease;
 }
 
-.text-box h2 {
-    font-size: 45px;
-}
-
-.text-box h2 span {
-    color: #005624;
+.about-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08);
 }
 
 .garis {
     width: 150px;
-    height: 3px;
-    background: black;
-    margin: 10px 0 25px 0;
+    height: 4px;
+    background: #005624;
+    margin: 15px 0 30px 0;
 }
+
+.about-flex p {
+    font-size: 17px;
+    line-height: 28px;
+    max-width: 600px;
+}
+
+
+
+/* ============================ */
+/*         KEUNGGULAN           */
+/* ============================ */
 
 .keunggulan {
     padding: 5rem 8rem;
@@ -141,34 +187,46 @@ nav .logo {
 
 .keunggulan h2 {
     font-size: 40px;
+    font-weight: 600;
 }
 
-.keunggulan span {
+.keunggulan h2 span {
     color: #005624;
 }
 
 .keunggulan-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 3rem;
     justify-content: center;
+    gap: 2.2rem;
+    margin-top: 3rem;
 }
 
 .card {
     width: 230px;
-    background: #5CAE60;
+    background: #4ea457;
     color: white;
     padding: 30px;
-    border-radius: 10px;
-    text-align: center;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #3f8c49;
+    box-shadow: 0px 10px 18px rgba(0,0,0,0.25);
 }
 
 .card img {
     width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
+    margin-bottom: 13px;
 }
+
+
+
+/* ============================ */
+/*            GALERI            */
+/* ============================ */
 
 .gallery {
     padding: 5rem 8rem;
@@ -176,137 +234,185 @@ nav .logo {
 }
 
 .gallery-box {
-    margin-top: 3rem;
     display: flex;
-    gap: 1.5rem;
     justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .gallery-box img {
-    width: 200px;
-    height: 150px;
+    width: 220px;
+    height: 160px;
     object-fit: cover;
+    border-radius: 12px;
+    transition: 0.35s ease;
 }
 
-.contact {
+.gallery-box img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.15);
+}
+
+
+
+/* ============================ */
+/*            KONTAK            */
+/* ============================ */
+
+.contact-page {
     padding: 5rem 8rem;
-    background: #005624;
-    color: white;
-}
-
-.contact h2 span {
-    color: #FFC300;
 }
 
 .contact-flex {
     display: flex;
-    margin-top: 2rem;
-    gap: 5rem;
+    gap: 4rem;
+    margin-top: 2.5rem;
 }
 
-.contact .form input,
-.contact .form textarea {
+.form input,
+.form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     border-radius: 10px;
     border: none;
+    transition: 0.3s ease;
 }
 
-.contact .form .btn {
-    border: none;
-    cursor: pointer;
+.form input:hover,
+.form textarea:hover {
+    background: #e4ffe7;
 }
 
-.sosmed {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 86, 36, 0.7);
 }
 
 .sosmed img {
     width: 40px;
-    height: 40px;
-}
-
-
-nav ul li a {
-    transition: 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #FFC300;
-    letter-spacing: 1px;
-}
-
-nav .logo {
-    transition: transform 0.3s ease;
-}
-
-nav .logo:hover {
-    transform: rotate(8deg) scale(1.1);
-}
-
-.btn {
     transition: 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #ffdb4d;
-    transform: translateY(-4px);
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
-}
-
-.card {
-    transition: 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    background-color: #4ea457;
-    box-shadow: 0px 10px 18px rgba(0,0,0,0.25);
-}
-
-.gallery-box img {
-    transition: 0.4s ease;
-    border-radius: 10px;
-}
-
-.gallery-box img:hover {
-    transform: scale(1.09);
-    filter: brightness(1.15);
-    border-radius: 15px;
-}
-
-.sosmed img {
-    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .sosmed img:hover {
     transform: scale(1.2) rotate(5deg);
 }
 
-.contact .form input,
-.contact .form textarea {
-    transition: 0.25s ease-in-out;
+
+
+/* ============================ */
+/*         ANGGOTA TIM          */
+/* ============================ */
+
+/* ============================ */
+/*         ANGGOTA TIM          */
+/* ============================ */
+
+.team {
+    padding: 5rem 8rem;
+    text-align: center;
 }
 
-.contact .form input:hover,
-.contact .form textarea:hover {
-    background-color: #ffffffc7;
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
 }
 
-.contact .form input:focus,
-.contact .form textarea:focus {
-    outline: none;
-    box-shadow: 0px 0px 8px rgba(255, 195, 0, 0.9);
+.member {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
 }
 
-.about .image-box img {
-    transition: 0.4s ease;
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.25);
 }
 
-.about .image-box img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.08);
+.member img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-bottom: 12px;
+}
+
+.member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.member p {
+    font-size: 15px;
+    color: gray;
+}
+
+
+.footer {
+    width: 100%;
+    background: #003c1e;
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    border-top: 4px solid #FFD84D;
+}
+
+/* AREA SPONSOR */
+.sponsor-area h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFD84D;
+    margin-bottom: 1rem;
+}
+
+.sponsor-logos {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.sponsor-logos img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* WATERMARK */
+.footer-watermark {
+    font-size: 14px;
+    color: #e6e6e6;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.keunggulan {
+    padding: 5rem 8rem;
+    text-align: center;
+    background: #e4f7e4; /* hijau muda */
+}
+
+.contact-page {
+    padding: 5rem 8rem;
+    background: #e4f7e4; /* hijau muda */
 }
